@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol LoginProtocol {
+protocol LoginProvider {
     func getToken(param: LoginRequest) -> AnyPublisher<TokenResponse, Error>
 }
 
-class LoginClient: LoginProtocol {
+class LoginClient: LoginProvider {
     var networkClient: NetworkProvider = NetworkClient.instance
 
     func getToken(param: LoginRequest) -> AnyPublisher<TokenResponse, Error> {

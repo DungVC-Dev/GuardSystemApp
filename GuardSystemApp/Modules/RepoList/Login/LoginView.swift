@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var loginViewModel = LoginViewModel()
+    @StateObject var loginViewModel = LoginViewModel()
     @State private var username = ""
     @State private var password = ""
 
     var body: some View {
         VStack {
-            TextField("Username", text: $username)
-                .padding()
-            SecureField("Password", text: $password)
-                .padding()
+            Text("Welcome")
+              .font(
+                Font.custom("Open Sans", size: 26)
+                  .weight(.bold)
+              )
+              .multilineTextAlignment(.center)
+              .foregroundColor(Color(red: 0.04, green: 0.56, blue: 0.67))
 
-            Button("Login") {
+            CommonTextField(
+                title: "Account",
+                placeholder: "Username",
+                text: $username
+            )
+            CommonTextField(
+                title: "Password",
+                placeholder: "Password",
+                text: $password
+            )
+            ButtonStateCommon(title: "Login") {
                 loginViewModel.login(username: username, password: password)
             }
-            .padding()
-
-            Text("Token: \(loginViewModel.token.token)")
-                .padding()
         }
         .padding()
     }

@@ -13,6 +13,8 @@
 		2593E7162AE8D75B00CD514A /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E7152AE8D75B00CD514A /* LoginRequest.swift */; };
 		2593E7192AE8D81800CD514A /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E7182AE8D81800CD514A /* LoginProvider.swift */; };
 		2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71A2AE8D93400CD514A /* LoginRouter.swift */; };
+		2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */; };
+		2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */; };
 		5979584D2AE6E75A00B8B0E2 /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582B2AE6E75A00B8B0E2 /* GithubRouter.swift */; };
 		5979584E2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582C2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift */; };
 		5979584F2AE6E75A00B8B0E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582E2AE6E75A00B8B0E2 /* User.swift */; };
@@ -47,6 +49,8 @@
 		2593E7152AE8D75B00CD514A /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		2593E7182AE8D81800CD514A /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
 		2593E71A2AE8D93400CD514A /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCommon.swift; sourceTree = "<group>"; };
+		2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateCommon.swift; sourceTree = "<group>"; };
 		2EA9EC63AFDB27287ED1D1AB /* Pods_GuardSystemApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuardSystemApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		597957CB2AE6E1AD00B8B0E2 /* GuardSystemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuardSystemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5979582B2AE6E75A00B8B0E2 /* GithubRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRouter.swift; sourceTree = "<group>"; };
@@ -116,9 +120,19 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		2593E71C2AE914D600CD514A /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */,
+				2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
 		597958292AE6E75A00B8B0E2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2593E71C2AE914D600CD514A /* CommonView */,
 				5979582A2AE6E75A00B8B0E2 /* Networking */,
 				5979582D2AE6E75A00B8B0E2 /* Models */,
 			);
@@ -431,6 +445,7 @@
 				59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */,
 				2593E7102AE8D6C500CD514A /* LoginView.swift in Sources */,
 				597958532AE6E75A00B8B0E2 /* NetworkProvider.swift in Sources */,
+				2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */,
 				5979584D2AE6E75A00B8B0E2 /* GithubRouter.swift in Sources */,
 				597958592AE6E75A00B8B0E2 /* RepoCell.swift in Sources */,
 				597958582AE6E75A00B8B0E2 /* EmptyNavigationLink.swift in Sources */,
@@ -449,6 +464,7 @@
 				597958602AE6E75A00B8B0E2 /* ProfileView.swift in Sources */,
 				2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */,
 				59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */,
+				2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

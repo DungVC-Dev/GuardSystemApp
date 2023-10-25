@@ -12,7 +12,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            RepoListCoordinator(username: Self.username)
+            LoginView()
         }
     }
 }

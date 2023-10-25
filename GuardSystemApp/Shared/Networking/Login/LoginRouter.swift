@@ -22,7 +22,7 @@ enum LoginRouter: RequestInfoConvertible {
     var path: String {
         switch self {
         case .login:
-            return "login"
+            return "/login"
         }
     }
 
@@ -36,9 +36,10 @@ enum LoginRouter: RequestInfoConvertible {
         let requestInfo =  RequestInfo(
             url: urlString,
             method: .post,
-            parameters: parameters
+            parameters: parameters,
+            headers: []
         )
-
+        print("VCD \(requestInfo)")
         return requestInfo
     }
 }
