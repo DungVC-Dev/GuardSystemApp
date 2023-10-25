@@ -12,7 +12,7 @@ struct TokenResponse: Codable {
 }
 
 // LoginRequest model
-struct LoginRequest: Encodable {
+struct LoginRequest: Codable {
     let username: String
     let passwd: String
 }

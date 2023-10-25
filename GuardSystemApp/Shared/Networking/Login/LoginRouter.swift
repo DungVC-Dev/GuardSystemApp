@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import Alamofire
 
 enum LoginRouter: RequestInfoConvertible {
     case login(param: LoginRequest)
 
 
     var endpoint: String {
-        "https://a79a88fa-83c6-458a-a8c9-0391fab47b0c.mock.pstmn.io"
+        "http://localhost:3000"
     }
 
     var urlString: String {
@@ -22,7 +23,7 @@ enum LoginRouter: RequestInfoConvertible {
     var path: String {
         switch self {
         case .login:
-            return "/login"
+            return "auth/login"
         }
     }
 
@@ -33,11 +34,11 @@ enum LoginRouter: RequestInfoConvertible {
             parameters = [ "username": param.username, "passwd": param.passwd]
         }
 
-        let requestInfo =  RequestInfo(
+        let requestInfo = RequestInfo(
             url: urlString,
             method: .post,
             parameters: parameters,
-            headers: []
+            encoding: JSONEncoding.default
         )
         print("VCD \(requestInfo)")
         return requestInfo

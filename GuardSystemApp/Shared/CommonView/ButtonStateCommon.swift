@@ -22,6 +22,7 @@ struct ButtonStateCommon: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding(20)
+                .frame(maxWidth: .infinity)
                 .background(
                     Rectangle()
                         .foregroundColor(.clear)
@@ -30,7 +31,6 @@ struct ButtonStateCommon: View {
                 )
                 .opacity(isEnabled ? 1.0 : 0.5)
         }
-        .frame(maxWidth: .infinity)
         .disabled(!isEnabled)
     }
 }

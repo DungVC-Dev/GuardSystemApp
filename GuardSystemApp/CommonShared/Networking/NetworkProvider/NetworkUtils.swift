@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import SwiftUI
 import Combine
 
 enum NetworkError: Error {
@@ -40,3 +41,42 @@ extension AnyPublisher where Output == Data, Failure == Error {
         }.eraseToAnyPublisher()
     }
 }
+
+func handleNetworkError(_ error: NetworkError, showAlert: Binding<AlertViewObject?>) {
+    switch error {
+    case .badRequest(let detailInfo):
+        showAlert.wrappedValue = AlertViewObject(
+            title: "Bad Request",
+            message: detailInfo ?? "An error occurred",
+            titleSecondary: "OK",
+            primaryButtonStyle: .normal,
+            secondaryButtonStyle: .normal
+        )
+    case .unauthorized:
+        showAlert.wrappedValue = AlertViewObject(
+            title: "Unauthorized",
+            message: "An error occurred: Unauthorized",
+            titleSecondary: "OK",
+            primaryButtonStyle: .normal,
+            secondaryButtonStyle: .normal
+        )
+    case .forbidden(let detailInfo):
+        showAlert.wrappedValue = AlertViewObject(
+            title: "Forbidden",
+            message: detailInfo ?? "An error occurred",
+            titleSecondary: "OK",
+            primaryButtonStyle: .normal,
+            secondaryButtonStyle: .normal
+        )
+        // Add cases for other error types as needed
+    default:
+        showAlert.wrappedValue = AlertViewObject(
+            title: "Error",
+            message: "An unknown error occurred",
+            titleSecondary: "OK",
+            primaryButtonStyle: .normal,
+            secondaryButtonStyle: .normal
+        )
+    }
+}
+

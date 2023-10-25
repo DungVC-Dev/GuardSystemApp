@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var loginViewModel = LoginViewModel()
+    @StateObject var viewModel = LoginViewModel()
     @State private var username = ""
     @State private var password = ""
 
     var body: some View {
-        VStack {
+        VStack(spacing: 18) {
             Text("Welcome")
               .font(
                 Font.custom("Open Sans", size: 26)
@@ -33,9 +33,10 @@ struct LoginView: View {
                 text: $password
             )
             ButtonStateCommon(title: "Login") {
-                loginViewModel.login(username: username, password: password)
+                viewModel.login(username: username, password: password)
             }
         }
         .padding()
+        .onViewAlert(with: $viewModel.alert)
     }
 }
