@@ -15,10 +15,6 @@
 		2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71A2AE8D93400CD514A /* LoginRouter.swift */; };
 		2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */; };
 		2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */; };
-		5979584D2AE6E75A00B8B0E2 /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582B2AE6E75A00B8B0E2 /* GithubRouter.swift */; };
-		5979584E2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582C2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift */; };
-		5979584F2AE6E75A00B8B0E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582E2AE6E75A00B8B0E2 /* User.swift */; };
-		597958502AE6E75A00B8B0E2 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979582F2AE6E75A00B8B0E2 /* Repo.swift */; };
 		597958512AE6E75A00B8B0E2 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958332AE6E75A00B8B0E2 /* NetworkClient.swift */; };
 		597958522AE6E75A00B8B0E2 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958342AE6E75A00B8B0E2 /* NetworkUtils.swift */; };
 		597958532AE6E75A00B8B0E2 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958352AE6E75A00B8B0E2 /* NetworkProvider.swift */; };
@@ -27,15 +23,6 @@
 		597958562AE6E75A00B8B0E2 /* Binding+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979583A2AE6E75A00B8B0E2 /* Binding+Utils.swift */; };
 		597958572AE6E75A00B8B0E2 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979583B2AE6E75A00B8B0E2 /* View+Utils.swift */; };
 		597958582AE6E75A00B8B0E2 /* EmptyNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979583D2AE6E75A00B8B0E2 /* EmptyNavigationLink.swift */; };
-		597958592AE6E75A00B8B0E2 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958412AE6E75A00B8B0E2 /* RepoCell.swift */; };
-		5979585A2AE6E75A00B8B0E2 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958422AE6E75A00B8B0E2 /* RepoListView.swift */; };
-		5979585B2AE6E75A00B8B0E2 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958432AE6E75A00B8B0E2 /* RepoListViewModel.swift */; };
-		5979585C2AE6E75A00B8B0E2 /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958452AE6E75A00B8B0E2 /* RepoDetailsViewModel.swift */; };
-		5979585D2AE6E75A00B8B0E2 /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958462AE6E75A00B8B0E2 /* RepoDetailsView.swift */; };
-		5979585E2AE6E75A00B8B0E2 /* RepoListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958472AE6E75A00B8B0E2 /* RepoListCoordinator.swift */; };
-		5979585F2AE6E75A00B8B0E2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958492AE6E75A00B8B0E2 /* ProfileCoordinator.swift */; };
-		597958602AE6E75A00B8B0E2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979584B2AE6E75A00B8B0E2 /* ProfileView.swift */; };
-		597958612AE6E75A00B8B0E2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979584C2AE6E75A00B8B0E2 /* ProfileViewModel.swift */; };
 		597958652AE981F600B8B0E2 /* CommonAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958642AE981F600B8B0E2 /* CommonAlertView.swift */; };
 		597958682AEAA03A00B8B0E2 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958672AEAA03A00B8B0E2 /* SignupModel.swift */; };
 		5979586B2AEB7BC100B8B0E2 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979586A2AEB7BC100B8B0E2 /* SignupView.swift */; };
@@ -47,6 +34,7 @@
 		597958792AEE260700B8B0E2 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958782AEE260700B8B0E2 /* AppRouter.swift */; };
 		5979587C2AEE28BA00B8B0E2 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979587B2AEE28BA00B8B0E2 /* TokenManager.swift */; };
 		5979587F2AEE2A2B00B8B0E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979587E2AEE2A2B00B8B0E2 /* HomeView.swift */; };
+		597958852AEE431600B8B0E2 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958842AEE431600B8B0E2 /* NewsView.swift */; };
 		59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D93E4A2AE6D83B0040F4F2 /* GuardSystemAppApp.swift */; };
 		59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D93E4C2AE6D83B0040F4F2 /* ContentView.swift */; };
 		59D93E4F2AE6D83C0040F4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D93E4E2AE6D83C0040F4F2 /* Assets.xcassets */; };
@@ -64,10 +52,6 @@
 		2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateCommon.swift; sourceTree = "<group>"; };
 		2EA9EC63AFDB27287ED1D1AB /* Pods_GuardSystemApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuardSystemApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		597957CB2AE6E1AD00B8B0E2 /* GuardSystemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuardSystemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5979582B2AE6E75A00B8B0E2 /* GithubRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRouter.swift; sourceTree = "<group>"; };
-		5979582C2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubNetworkProvider.swift; sourceTree = "<group>"; };
-		5979582E2AE6E75A00B8B0E2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5979582F2AE6E75A00B8B0E2 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		597958332AE6E75A00B8B0E2 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		597958342AE6E75A00B8B0E2 /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		597958352AE6E75A00B8B0E2 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -76,15 +60,6 @@
 		5979583A2AE6E75A00B8B0E2 /* Binding+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Binding+Utils.swift"; sourceTree = "<group>"; };
 		5979583B2AE6E75A00B8B0E2 /* View+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
 		5979583D2AE6E75A00B8B0E2 /* EmptyNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyNavigationLink.swift; sourceTree = "<group>"; };
-		597958412AE6E75A00B8B0E2 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
-		597958422AE6E75A00B8B0E2 /* RepoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
-		597958432AE6E75A00B8B0E2 /* RepoListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
-		597958452AE6E75A00B8B0E2 /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
-		597958462AE6E75A00B8B0E2 /* RepoDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
-		597958472AE6E75A00B8B0E2 /* RepoListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoListCoordinator.swift; sourceTree = "<group>"; };
-		597958492AE6E75A00B8B0E2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		5979584B2AE6E75A00B8B0E2 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		5979584C2AE6E75A00B8B0E2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		597958642AE981F600B8B0E2 /* CommonAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertView.swift; sourceTree = "<group>"; };
 		597958672AEAA03A00B8B0E2 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		5979586A2AEB7BC100B8B0E2 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -96,6 +71,7 @@
 		597958782AEE260700B8B0E2 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		5979587B2AEE28BA00B8B0E2 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		5979587E2AEE2A2B00B8B0E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		597958842AEE431600B8B0E2 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		59D93E4A2AE6D83B0040F4F2 /* GuardSystemAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardSystemAppApp.swift; sourceTree = "<group>"; };
 		59D93E4C2AE6D83B0040F4F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59D93E4E2AE6D83C0040F4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,8 +142,6 @@
 			children = (
 				597958722AED23C700B8B0E2 /* Signup */,
 				2593E7172AE8D7D500CD514A /* Login */,
-				5979582B2AE6E75A00B8B0E2 /* GithubRouter.swift */,
-				5979582C2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -177,8 +151,6 @@
 			children = (
 				597958662AEAA01F00B8B0E2 /* Signup */,
 				2593E7132AE8D74C00CD514A /* Login */,
-				5979582E2AE6E75A00B8B0E2 /* User.swift */,
-				5979582F2AE6E75A00B8B0E2 /* Repo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,57 +221,8 @@
 				5979587D2AEE2A1E00B8B0E2 /* Home */,
 				597958692AEB7BAF00B8B0E2 /* Signup */,
 				2593E70E2AE8D6B000CD514A /* Login */,
-				5979583F2AE6E75A00B8B0E2 /* RepoList */,
-				597958482AE6E75A00B8B0E2 /* Profile */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		5979583F2AE6E75A00B8B0E2 /* RepoList */ = {
-			isa = PBXGroup;
-			children = (
-				597958402AE6E75A00B8B0E2 /* RepoList */,
-				597958442AE6E75A00B8B0E2 /* RepoDetails */,
-				597958472AE6E75A00B8B0E2 /* RepoListCoordinator.swift */,
-			);
-			path = RepoList;
-			sourceTree = "<group>";
-		};
-		597958402AE6E75A00B8B0E2 /* RepoList */ = {
-			isa = PBXGroup;
-			children = (
-				597958412AE6E75A00B8B0E2 /* RepoCell.swift */,
-				597958422AE6E75A00B8B0E2 /* RepoListView.swift */,
-				597958432AE6E75A00B8B0E2 /* RepoListViewModel.swift */,
-			);
-			path = RepoList;
-			sourceTree = "<group>";
-		};
-		597958442AE6E75A00B8B0E2 /* RepoDetails */ = {
-			isa = PBXGroup;
-			children = (
-				597958452AE6E75A00B8B0E2 /* RepoDetailsViewModel.swift */,
-				597958462AE6E75A00B8B0E2 /* RepoDetailsView.swift */,
-			);
-			path = RepoDetails;
-			sourceTree = "<group>";
-		};
-		597958482AE6E75A00B8B0E2 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				597958492AE6E75A00B8B0E2 /* ProfileCoordinator.swift */,
-				5979584A2AE6E75A00B8B0E2 /* Profile */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		5979584A2AE6E75A00B8B0E2 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				5979584B2AE6E75A00B8B0E2 /* ProfileView.swift */,
-				5979584C2AE6E75A00B8B0E2 /* ProfileViewModel.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		597958662AEAA01F00B8B0E2 /* Signup */ = {
@@ -348,8 +271,17 @@
 			isa = PBXGroup;
 			children = (
 				5979587E2AEE2A2B00B8B0E2 /* HomeView.swift */,
+				597958832AEE430700B8B0E2 /* Content */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		597958832AEE430700B8B0E2 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				597958842AEE431600B8B0E2 /* NewsView.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		59D93E3E2AE6D83A0040F4F2 = {
@@ -518,10 +450,7 @@
 			files = (
 				597958522AE6E75A00B8B0E2 /* NetworkUtils.swift in Sources */,
 				2593E7162AE8D75B00CD514A /* LoginRequest.swift in Sources */,
-				5979585F2AE6E75A00B8B0E2 /* ProfileCoordinator.swift in Sources */,
 				2593E7192AE8D81800CD514A /* LoginProvider.swift in Sources */,
-				5979585C2AE6E75A00B8B0E2 /* RepoDetailsViewModel.swift in Sources */,
-				5979585E2AE6E75A00B8B0E2 /* RepoListCoordinator.swift in Sources */,
 				597958572AE6E75A00B8B0E2 /* View+Utils.swift in Sources */,
 				59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */,
 				2593E7102AE8D6C500CD514A /* LoginView.swift in Sources */,
@@ -529,32 +458,23 @@
 				597958532AE6E75A00B8B0E2 /* NetworkProvider.swift in Sources */,
 				2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */,
 				5979587F2AEE2A2B00B8B0E2 /* HomeView.swift in Sources */,
-				5979584D2AE6E75A00B8B0E2 /* GithubRouter.swift in Sources */,
 				597958652AE981F600B8B0E2 /* CommonAlertView.swift in Sources */,
-				597958592AE6E75A00B8B0E2 /* RepoCell.swift in Sources */,
 				597958582AE6E75A00B8B0E2 /* EmptyNavigationLink.swift in Sources */,
-				5979584E2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift in Sources */,
 				5979587C2AEE28BA00B8B0E2 /* TokenManager.swift in Sources */,
 				597958562AE6E75A00B8B0E2 /* Binding+Utils.swift in Sources */,
 				2593E7122AE8D6EA00CD514A /* LoginViewModel.swift in Sources */,
 				5979586D2AEB7BD300B8B0E2 /* SignupViewModel.swift in Sources */,
-				5979585B2AE6E75A00B8B0E2 /* RepoListViewModel.swift in Sources */,
 				597958682AEAA03A00B8B0E2 /* SignupModel.swift in Sources */,
-				5979585D2AE6E75A00B8B0E2 /* RepoDetailsView.swift in Sources */,
 				597958792AEE260700B8B0E2 /* AppRouter.swift in Sources */,
 				597958552AE6E75A00B8B0E2 /* Publisher+Utils.swift in Sources */,
-				597958612AE6E75A00B8B0E2 /* ProfileViewModel.swift in Sources */,
-				5979585A2AE6E75A00B8B0E2 /* RepoListView.swift in Sources */,
-				597958502AE6E75A00B8B0E2 /* Repo.swift in Sources */,
 				597958512AE6E75A00B8B0E2 /* NetworkClient.swift in Sources */,
 				597958762AED24CB00B8B0E2 /* SignupRouter.swift in Sources */,
 				597958712AECFFFB00B8B0E2 /* ColorCommon.swift in Sources */,
 				597958542AE6E75A00B8B0E2 /* Container.swift in Sources */,
-				5979584F2AE6E75A00B8B0E2 /* User.swift in Sources */,
 				597958742AED23F800B8B0E2 /* SignupProvider.swift in Sources */,
 				5979586F2AECFDAC00B8B0E2 /* FontSizeCommon.swift in Sources */,
-				597958602AE6E75A00B8B0E2 /* ProfileView.swift in Sources */,
 				2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */,
+				597958852AEE431600B8B0E2 /* NewsView.swift in Sources */,
 				59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */,
 				2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */,
 			);

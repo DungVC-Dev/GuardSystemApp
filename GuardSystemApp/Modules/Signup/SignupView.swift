@@ -26,30 +26,31 @@ struct SignupView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.skyBlue)
             Spacer()
-            HStack(spacing: 12) {
+            ScrollView {
+                HStack(spacing: 12) {
+                    CommonTextFieldLogin(
+                        title: "First Name",
+                        placeholder: "Enter Your First Name",
+                        text: $firstName
+                    )
+                    CommonTextFieldLogin(
+                        title: "Last Name",
+                        placeholder: "Enter Your Last Name",
+                        text: $lastName
+                    )
+                }
                 CommonTextFieldLogin(
-                    title: "First Name",
-                    placeholder: "Enter Your First Name",
-                    text: $firstName
+                    title: "Account",
+                    placeholder: "Enter Your Account",
+                    text: $username
                 )
-                CommonTextFieldLogin(
-                    title: "Last Name",
-                    placeholder: "Enter Your Last Name",
-                    text: $lastName
-                )
+                inputPassword
+
+                Spacer()
+                buttonSignup
             }
-            CommonTextFieldLogin(
-                title: "Account",
-                placeholder: "Enter Your Account",
-                text: $username
-            )
-            inputPassword
-
-            Spacer()
-            buttonSignup
-
         }
-        .padding()
+        .padding(16)
         .navigationBarBackButtonHidden()
         .onViewAlert(with: $viewModel.alert)
     }

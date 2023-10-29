@@ -10,8 +10,9 @@ import SwiftUI
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
     @State var isAction = false
-    @State private var username = ""
-    @State private var password = ""
+    @State var isHidenPass = false
+    @State private var username = "Vcd"
+    @State private var password = "123"
 
     var body: some View {
         NavigationView {
@@ -30,24 +31,23 @@ struct LoginView: View {
                 CommonTextFieldLogin(
                     title: "Password",
                     placeholder: "Enter Your Password",
-                    text: $password
+                    text: $password,
+                    isTextFieldPass: true
                 )
 
-                HStack {
-                    Spacer()
-                    Text("Forget Password")
-                        .font(.customFontSize(font: .openSans, weight: .semibold, size: 16))
-                        .foregroundColor(.black)
-                        .onTapGesture {
-                            // Handler Forget Password
-                        }
-                }
+                Text("Forget Password")
+                    .font(.customFontSize(font: .openSans, weight: .semibold, size: 16))
+                    .foregroundColor(.black)
+                    .trailingAlignment()
+                    .onTapGesture {
+                        // Handler Forget Password
+                    }
 
                 Spacer()
                 buttonLogin
 
             }
-            .padding()
+            .padding(16)
         }
         .navigationBarBackButtonHidden()
         .onViewAlert(with: $viewModel.alert)

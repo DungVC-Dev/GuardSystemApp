@@ -26,7 +26,7 @@ struct ButtonStateCommon: View {
                 .background(
                     Rectangle()
                         .foregroundColor(.clear)
-                        .background(isEnabled ? Color(red: 0.04, green: 0.56, blue: 0.67) : Color.gray)
+                        .background(isEnabled ? Color.mixBlueGreen : Color.gray)
                         .cornerRadius(10)
                 )
                 .opacity(isEnabled ? 1.0 : 0.5)
