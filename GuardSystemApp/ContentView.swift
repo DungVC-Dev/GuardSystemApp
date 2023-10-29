@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    static let username = "huynguyencong"
+    @ObservedObject var router = AppRouter.shared
 
     var body: some View {
-        NavigationView {
-            LoginView()
+        Group {
+            if let route = router.currentRoute {
+                switch route {
+                case .login:
+                    LoginView()
+                case .home:
+                    HomeView()
+                }
+            } else {
+                Text("Loading...")
+                    .onAppear {
+                        // Check if user is authenticated
+                        if TokenManager.shared.isTokenValid() {
+                            self.router.navigate(to: .home)
+                        } else {
+                            self.router.navigate(to: .login)
+                        }
+                    }
+            }
         }
-    }
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

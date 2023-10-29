@@ -51,6 +51,7 @@ struct SignupView: View {
         }
         .padding()
         .navigationBarBackButtonHidden()
+        .onViewAlert(with: $viewModel.alert)
     }
 }
 

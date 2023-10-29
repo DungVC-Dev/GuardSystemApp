@@ -44,6 +44,9 @@
 		597958712AECFFFB00B8B0E2 /* ColorCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958702AECFFFB00B8B0E2 /* ColorCommon.swift */; };
 		597958742AED23F800B8B0E2 /* SignupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958732AED23F800B8B0E2 /* SignupProvider.swift */; };
 		597958762AED24CB00B8B0E2 /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958752AED24CB00B8B0E2 /* SignupRouter.swift */; };
+		597958792AEE260700B8B0E2 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958782AEE260700B8B0E2 /* AppRouter.swift */; };
+		5979587C2AEE28BA00B8B0E2 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979587B2AEE28BA00B8B0E2 /* TokenManager.swift */; };
+		5979587F2AEE2A2B00B8B0E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979587E2AEE2A2B00B8B0E2 /* HomeView.swift */; };
 		59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D93E4A2AE6D83B0040F4F2 /* GuardSystemAppApp.swift */; };
 		59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D93E4C2AE6D83B0040F4F2 /* ContentView.swift */; };
 		59D93E4F2AE6D83C0040F4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D93E4E2AE6D83C0040F4F2 /* Assets.xcassets */; };
@@ -90,6 +93,9 @@
 		597958702AECFFFB00B8B0E2 /* ColorCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCommon.swift; sourceTree = "<group>"; };
 		597958732AED23F800B8B0E2 /* SignupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProvider.swift; sourceTree = "<group>"; };
 		597958752AED24CB00B8B0E2 /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
+		597958782AEE260700B8B0E2 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		5979587B2AEE28BA00B8B0E2 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		5979587E2AEE2A2B00B8B0E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		59D93E4A2AE6D83B0040F4F2 /* GuardSystemAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardSystemAppApp.swift; sourceTree = "<group>"; };
 		59D93E4C2AE6D83B0040F4F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59D93E4E2AE6D83C0040F4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +186,8 @@
 		597958302AE6E75A00B8B0E2 /* CommonShared */ = {
 			isa = PBXGroup;
 			children = (
+				5979587A2AEE289F00B8B0E2 /* TokenManager */,
+				597958772AEE25E600B8B0E2 /* AppRouter */,
 				597958312AE6E75A00B8B0E2 /* Networking */,
 				597958362AE6E75A00B8B0E2 /* Utils */,
 				597958382AE6E75A00B8B0E2 /* Extensions */,
@@ -238,6 +246,7 @@
 		5979583E2AE6E75A00B8B0E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5979587D2AEE2A1E00B8B0E2 /* Home */,
 				597958692AEB7BAF00B8B0E2 /* Signup */,
 				2593E70E2AE8D6B000CD514A /* Login */,
 				5979583F2AE6E75A00B8B0E2 /* RepoList */,
@@ -317,6 +326,30 @@
 				597958752AED24CB00B8B0E2 /* SignupRouter.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		597958772AEE25E600B8B0E2 /* AppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				597958782AEE260700B8B0E2 /* AppRouter.swift */,
+			);
+			path = AppRouter;
+			sourceTree = "<group>";
+		};
+		5979587A2AEE289F00B8B0E2 /* TokenManager */ = {
+			isa = PBXGroup;
+			children = (
+				5979587B2AEE28BA00B8B0E2 /* TokenManager.swift */,
+			);
+			path = TokenManager;
+			sourceTree = "<group>";
+		};
+		5979587D2AEE2A1E00B8B0E2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5979587E2AEE2A2B00B8B0E2 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		59D93E3E2AE6D83A0040F4F2 = {
@@ -495,17 +528,20 @@
 				5979586B2AEB7BC100B8B0E2 /* SignupView.swift in Sources */,
 				597958532AE6E75A00B8B0E2 /* NetworkProvider.swift in Sources */,
 				2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */,
+				5979587F2AEE2A2B00B8B0E2 /* HomeView.swift in Sources */,
 				5979584D2AE6E75A00B8B0E2 /* GithubRouter.swift in Sources */,
 				597958652AE981F600B8B0E2 /* CommonAlertView.swift in Sources */,
 				597958592AE6E75A00B8B0E2 /* RepoCell.swift in Sources */,
 				597958582AE6E75A00B8B0E2 /* EmptyNavigationLink.swift in Sources */,
 				5979584E2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift in Sources */,
+				5979587C2AEE28BA00B8B0E2 /* TokenManager.swift in Sources */,
 				597958562AE6E75A00B8B0E2 /* Binding+Utils.swift in Sources */,
 				2593E7122AE8D6EA00CD514A /* LoginViewModel.swift in Sources */,
 				5979586D2AEB7BD300B8B0E2 /* SignupViewModel.swift in Sources */,
 				5979585B2AE6E75A00B8B0E2 /* RepoListViewModel.swift in Sources */,
 				597958682AEAA03A00B8B0E2 /* SignupModel.swift in Sources */,
 				5979585D2AE6E75A00B8B0E2 /* RepoDetailsView.swift in Sources */,
+				597958792AEE260700B8B0E2 /* AppRouter.swift in Sources */,
 				597958552AE6E75A00B8B0E2 /* Publisher+Utils.swift in Sources */,
 				597958612AE6E75A00B8B0E2 /* ProfileViewModel.swift in Sources */,
 				5979585A2AE6E75A00B8B0E2 /* RepoListView.swift in Sources */,

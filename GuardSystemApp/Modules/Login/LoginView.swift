@@ -14,45 +14,68 @@ struct LoginView: View {
     @State private var password = ""
 
     var body: some View {
-        VStack(spacing: 18) {
-            EmptyNavigationLink(destination: SignupView(), isActive: $isAction)
-            Text("Welcome")
-                .font(.customFontSize(font: .openSans, weight: .bold, size: 26))
-              .multilineTextAlignment(.center)
-              .foregroundColor(.skyBlue)
-            Spacer()
-            CommonTextFieldLogin(
-                title: "Account",
-                placeholder: "Enter Your Account",
-                text: $username
-            )
-            CommonTextFieldLogin(
-                title: "Password",
-                placeholder: "Enter Your Password",
-                text: $password
-            )
-            Spacer()
-            ButtonStateCommon(title: "Login") {
-                viewModel.login(username: username, password: password)
-            }
-            Text("OR")
-                .font(.customFontSize(font: .averiaSansLibre, weight: .bold, size: 22))
-                .multilineTextAlignment(.center)
-                .foregroundColor(.mediumGray)
-
-            HStack(spacing: 4) {
-                Text("Don’t have an account?")
-                    .font(.customFontSize(font: .openSans, weight: .bold, size: 16))
-                    .foregroundColor(.mediumGray)
-                Text("Sign Up")
-                    .font(.customFontSize(font: .openSans, weight: .bold, size: 16))
+        NavigationView {
+            VStack(spacing: 18) {
+                EmptyNavigationLink(destination: SignupView(), isActive: $isAction)
+                Text("Welcome")
+                    .font(.customFontSize(font: .openSans, weight: .bold, size: 26))
+                    .multilineTextAlignment(.center)
                     .foregroundColor(.skyBlue)
-                    .onTapGesture {
-                        isAction = true
-                    }
+                Spacer()
+                CommonTextFieldLogin(
+                    title: "Account",
+                    placeholder: "Enter Your Account",
+                    text: $username
+                )
+                CommonTextFieldLogin(
+                    title: "Password",
+                    placeholder: "Enter Your Password",
+                    text: $password
+                )
+
+                HStack {
+                    Spacer()
+                    Text("Forget Password")
+                        .font(.customFontSize(font: .openSans, weight: .semibold, size: 16))
+                        .foregroundColor(.black)
+                        .onTapGesture {
+                            // Handler Forget Password
+                        }
+                }
+
+                Spacer()
+                buttonLogin
+
             }
+            .padding()
         }
-        .padding()
+        .navigationBarBackButtonHidden()
         .onViewAlert(with: $viewModel.alert)
+    }
+}
+
+private extension LoginView {
+
+    @ViewBuilder
+    var buttonLogin: some View {
+        ButtonStateCommon(title: "Login") {
+            viewModel.login(username: username, password: password)
+        }
+        Text("OR")
+            .font(.customFontSize(font: .averiaSansLibre, weight: .bold, size: 22))
+            .multilineTextAlignment(.center)
+            .foregroundColor(.mediumGray)
+
+        HStack(spacing: 4) {
+            Text("Don’t have an account?")
+                .font(.customFontSize(font: .openSans, weight: .bold, size: 16))
+                .foregroundColor(.mediumGray)
+            Text("Sign Up")
+                .font(.customFontSize(font: .openSans, weight: .bold, size: 16))
+                .foregroundColor(.skyBlue)
+                .onTapGesture {
+                    isAction = true
+                }
+        }
     }
 }
