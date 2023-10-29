@@ -1,15 +1,15 @@
 //
-//  LoginRouter.swift
+//  SignupRouter.swift
 //  GuardSystemApp
 //
-//  Created by dungvc1 on 25/10/2023.
+//  Created by Công Dũng on 28/10/2023.
 //
 
 import Foundation
 import Alamofire
 
-enum LoginRouter: RequestInfoConvertible {
-    case login(param: LoginRequest)
+enum SignupRouter: RequestInfoConvertible {
+    case signup(param: SignupRequest)
 
 
     var endpoint: String {
@@ -22,16 +22,24 @@ enum LoginRouter: RequestInfoConvertible {
 
     var path: String {
         switch self {
-        case .login:
-            return "auth/login"
+        case .signup:
+            return "auth/signup"
         }
     }
 
     func asRequestInfo() -> RequestInfo {
         let parameters: [String: Any]
         switch self {
-            case .login(let param):
-            parameters = [ "username": param.username, "passwd": param.passwd]
+        case .signup(let param):
+            parameters = [
+                "username": param.username,
+                "passwd": param.passwd,
+                "confirmpasswd": param.confirmpasswd,
+                "role": param.role,
+                "firstname": param.firstname,
+                "lastname": param.lastname,
+                "phone": param.phone
+            ]
         }
 
         let requestInfo = RequestInfo(

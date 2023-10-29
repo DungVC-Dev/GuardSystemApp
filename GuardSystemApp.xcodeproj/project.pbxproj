@@ -37,6 +37,13 @@
 		597958602AE6E75A00B8B0E2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979584B2AE6E75A00B8B0E2 /* ProfileView.swift */; };
 		597958612AE6E75A00B8B0E2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979584C2AE6E75A00B8B0E2 /* ProfileViewModel.swift */; };
 		597958652AE981F600B8B0E2 /* CommonAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958642AE981F600B8B0E2 /* CommonAlertView.swift */; };
+		597958682AEAA03A00B8B0E2 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958672AEAA03A00B8B0E2 /* SignupModel.swift */; };
+		5979586B2AEB7BC100B8B0E2 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979586A2AEB7BC100B8B0E2 /* SignupView.swift */; };
+		5979586D2AEB7BD300B8B0E2 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979586C2AEB7BD300B8B0E2 /* SignupViewModel.swift */; };
+		5979586F2AECFDAC00B8B0E2 /* FontSizeCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979586E2AECFDAC00B8B0E2 /* FontSizeCommon.swift */; };
+		597958712AECFFFB00B8B0E2 /* ColorCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958702AECFFFB00B8B0E2 /* ColorCommon.swift */; };
+		597958742AED23F800B8B0E2 /* SignupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958732AED23F800B8B0E2 /* SignupProvider.swift */; };
+		597958762AED24CB00B8B0E2 /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958752AED24CB00B8B0E2 /* SignupRouter.swift */; };
 		59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D93E4A2AE6D83B0040F4F2 /* GuardSystemAppApp.swift */; };
 		59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D93E4C2AE6D83B0040F4F2 /* ContentView.swift */; };
 		59D93E4F2AE6D83C0040F4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D93E4E2AE6D83C0040F4F2 /* Assets.xcassets */; };
@@ -76,6 +83,13 @@
 		5979584B2AE6E75A00B8B0E2 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5979584C2AE6E75A00B8B0E2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		597958642AE981F600B8B0E2 /* CommonAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertView.swift; sourceTree = "<group>"; };
+		597958672AEAA03A00B8B0E2 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		5979586A2AEB7BC100B8B0E2 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		5979586C2AEB7BD300B8B0E2 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		5979586E2AECFDAC00B8B0E2 /* FontSizeCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeCommon.swift; sourceTree = "<group>"; };
+		597958702AECFFFB00B8B0E2 /* ColorCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCommon.swift; sourceTree = "<group>"; };
+		597958732AED23F800B8B0E2 /* SignupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProvider.swift; sourceTree = "<group>"; };
+		597958752AED24CB00B8B0E2 /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
 		59D93E4A2AE6D83B0040F4F2 /* GuardSystemAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardSystemAppApp.swift; sourceTree = "<group>"; };
 		59D93E4C2AE6D83B0040F4F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59D93E4E2AE6D83C0040F4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +158,7 @@
 		5979582A2AE6E75A00B8B0E2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				597958722AED23C700B8B0E2 /* Signup */,
 				2593E7172AE8D7D500CD514A /* Login */,
 				5979582B2AE6E75A00B8B0E2 /* GithubRouter.swift */,
 				5979582C2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift */,
@@ -154,6 +169,7 @@
 		5979582D2AE6E75A00B8B0E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				597958662AEAA01F00B8B0E2 /* Signup */,
 				2593E7132AE8D74C00CD514A /* Login */,
 				5979582E2AE6E75A00B8B0E2 /* User.swift */,
 				5979582F2AE6E75A00B8B0E2 /* Repo.swift */,
@@ -213,6 +229,8 @@
 			children = (
 				5979583D2AE6E75A00B8B0E2 /* EmptyNavigationLink.swift */,
 				597958642AE981F600B8B0E2 /* CommonAlertView.swift */,
+				5979586E2AECFDAC00B8B0E2 /* FontSizeCommon.swift */,
+				597958702AECFFFB00B8B0E2 /* ColorCommon.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +238,8 @@
 		5979583E2AE6E75A00B8B0E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				597958692AEB7BAF00B8B0E2 /* Signup */,
+				2593E70E2AE8D6B000CD514A /* Login */,
 				5979583F2AE6E75A00B8B0E2 /* RepoList */,
 				597958482AE6E75A00B8B0E2 /* Profile */,
 			);
@@ -229,7 +249,6 @@
 		5979583F2AE6E75A00B8B0E2 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
-				2593E70E2AE8D6B000CD514A /* Login */,
 				597958402AE6E75A00B8B0E2 /* RepoList */,
 				597958442AE6E75A00B8B0E2 /* RepoDetails */,
 				597958472AE6E75A00B8B0E2 /* RepoListCoordinator.swift */,
@@ -272,6 +291,32 @@
 				5979584C2AE6E75A00B8B0E2 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		597958662AEAA01F00B8B0E2 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				597958672AEAA03A00B8B0E2 /* SignupModel.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		597958692AEB7BAF00B8B0E2 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				5979586A2AEB7BC100B8B0E2 /* SignupView.swift */,
+				5979586C2AEB7BD300B8B0E2 /* SignupViewModel.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		597958722AED23C700B8B0E2 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				597958732AED23F800B8B0E2 /* SignupProvider.swift */,
+				597958752AED24CB00B8B0E2 /* SignupRouter.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		59D93E3E2AE6D83A0040F4F2 = {
@@ -447,6 +492,7 @@
 				597958572AE6E75A00B8B0E2 /* View+Utils.swift in Sources */,
 				59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */,
 				2593E7102AE8D6C500CD514A /* LoginView.swift in Sources */,
+				5979586B2AEB7BC100B8B0E2 /* SignupView.swift in Sources */,
 				597958532AE6E75A00B8B0E2 /* NetworkProvider.swift in Sources */,
 				2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */,
 				5979584D2AE6E75A00B8B0E2 /* GithubRouter.swift in Sources */,
@@ -456,15 +502,21 @@
 				5979584E2AE6E75A00B8B0E2 /* GithubNetworkProvider.swift in Sources */,
 				597958562AE6E75A00B8B0E2 /* Binding+Utils.swift in Sources */,
 				2593E7122AE8D6EA00CD514A /* LoginViewModel.swift in Sources */,
+				5979586D2AEB7BD300B8B0E2 /* SignupViewModel.swift in Sources */,
 				5979585B2AE6E75A00B8B0E2 /* RepoListViewModel.swift in Sources */,
+				597958682AEAA03A00B8B0E2 /* SignupModel.swift in Sources */,
 				5979585D2AE6E75A00B8B0E2 /* RepoDetailsView.swift in Sources */,
 				597958552AE6E75A00B8B0E2 /* Publisher+Utils.swift in Sources */,
 				597958612AE6E75A00B8B0E2 /* ProfileViewModel.swift in Sources */,
 				5979585A2AE6E75A00B8B0E2 /* RepoListView.swift in Sources */,
 				597958502AE6E75A00B8B0E2 /* Repo.swift in Sources */,
 				597958512AE6E75A00B8B0E2 /* NetworkClient.swift in Sources */,
+				597958762AED24CB00B8B0E2 /* SignupRouter.swift in Sources */,
+				597958712AECFFFB00B8B0E2 /* ColorCommon.swift in Sources */,
 				597958542AE6E75A00B8B0E2 /* Container.swift in Sources */,
 				5979584F2AE6E75A00B8B0E2 /* User.swift in Sources */,
+				597958742AED23F800B8B0E2 /* SignupProvider.swift in Sources */,
+				5979586F2AECFDAC00B8B0E2 /* FontSizeCommon.swift in Sources */,
 				597958602AE6E75A00B8B0E2 /* ProfileView.swift in Sources */,
 				2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */,
 				59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonTextField: View {
+struct CommonTextFieldLogin: View {
     var title: String
     var placeholder: String
     var text: Binding<String>
@@ -16,15 +16,15 @@ struct CommonTextField: View {
         VStack (spacing: 18) {
             HStack {
                 Text(title)
-                    .font(
-                        Font.custom("Open Sans", size: 22)
-                            .weight(.semibold)
-                    )
+                    .font(.customFontSize(font: .openSans, weight: .semibold, size: 20))
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(1)
                     .foregroundColor(.black)
                 Spacer()
             }
 
             TextField(placeholder, text: text)
+                .font(.customFontSize(font: .openSans, weight: .semibold, size: 16))
                 .padding()
                 .background(
                     Rectangle()

@@ -12,6 +12,10 @@ enum NetworkError: Error {
     case invalidInput
     case invalidJSON
     case other(Error)
+
+    init(underlyingError: Error) {
+        self = .other(underlyingError)
+    }
 }
 
 extension AnyPublisher where Output == Data, Failure == Error {
@@ -34,11 +38,55 @@ extension AnyPublisher where Output == Data, Failure == Error {
             throw NetworkError.invalidJSON
         }.eraseToAnyPublisher()
     }
-    
-    func decode<T: Decodable>(jsonDecoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<T, Failure> {
+
+    func decode<T: Decodable>(jsonDecoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<T, NetworkError> {
         tryMap { data -> T in
             return try jsonDecoder.decode(T.self, from: data)
-        }.eraseToAnyPublisher()
+        }
+        .mapError { error in
+            // Convert any error to NetworkError here
+            return NetworkError(underlyingError: error)
+        }
+        .eraseToAnyPublisher()
     }
 }
 
+class ErrorHandlingUtility {
+    static func handleNetworkError(_ error: Error?, completionHandler: @escaping (AlertViewObject) -> Void) {
+        if let networkError = error as? NetworkError {
+            switch networkError {
+            case .invalidResponse:
+                completionHandler(AlertViewObject(
+                    title: "Error",
+                    message: "Invalid response",
+                    titleSecondary: "OK"
+                ))
+            case .invalidInput:
+                completionHandler(AlertViewObject(
+                    title: "Error",
+                    message: "Invalid input",
+                    titleSecondary: "OK"
+                ))
+            case .invalidJSON:
+                completionHandler(AlertViewObject(
+                    title: "Error",
+                    message: "Invalid JSON",
+                    titleSecondary: "OK"
+                ))
+            case .other(let underlyingError):
+                completionHandler(AlertViewObject(
+                    title: "Error",
+                    message: "An error occurred: \(underlyingError.localizedDescription)",
+                    titleSecondary: "OK"
+                ))
+            }
+        } else if let error = error {
+            // Handle other types of errors
+            completionHandler(AlertViewObject(
+                title: "Error",
+                message: "An error occurred: \(error.localizedDescription)",
+                titleSecondary: "OK"
+            ))
+        }
+    }
+}

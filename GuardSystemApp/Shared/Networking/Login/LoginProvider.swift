@@ -9,13 +9,13 @@ import Foundation
 import Combine
 
 protocol LoginProvider {
-    func getToken(param: LoginRequest) -> AnyPublisher<TokenResponse, Error>
+    func getToken(param: LoginRequest) -> AnyPublisher<TokenResponse, NetworkError>
 }
 
 class LoginClient: LoginProvider {
     var networkClient: NetworkProvider = NetworkClient.instance
 
-    func getToken(param: LoginRequest) -> AnyPublisher<TokenResponse, Error> {
+    func getToken(param: LoginRequest) -> AnyPublisher<TokenResponse, NetworkError> {
         networkClient.request(LoginRouter.login(param: param)).decode()
     }
 }

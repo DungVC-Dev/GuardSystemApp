@@ -20,11 +20,9 @@ class LoginViewModel: ObservableObject {
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(let error):
-                    self.alert = AlertViewObject(
-                        title: "Error",
-                        message: "An error occurred: \(error)",
-                        titleSecondary: "OK"
-                    )
+                    ErrorHandlingUtility.handleNetworkError(error) { alertView in
+                        self.alert = alertView
+                    }
                 case .finished:
                     break
                 }
