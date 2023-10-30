@@ -15,6 +15,9 @@
 		2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71A2AE8D93400CD514A /* LoginRouter.swift */; };
 		2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */; };
 		2593E7202AE918DF00CD514A /* ButtonStateCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */; };
+		25B2B8612AEF65AD00830C09 /* InfoCardCommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B2B8602AEF65AD00830C09 /* InfoCardCommonView.swift */; };
+		25B2B8652AEF9F9000830C09 /* ButtonIconCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B2B8642AEF9F9000830C09 /* ButtonIconCommon.swift */; };
+		25B2B8682AEFB1C400830C09 /* AllGuardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B2B8672AEFB1C300830C09 /* AllGuardView.swift */; };
 		597958512AE6E75A00B8B0E2 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958332AE6E75A00B8B0E2 /* NetworkClient.swift */; };
 		597958522AE6E75A00B8B0E2 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958342AE6E75A00B8B0E2 /* NetworkUtils.swift */; };
 		597958532AE6E75A00B8B0E2 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597958352AE6E75A00B8B0E2 /* NetworkProvider.swift */; };
@@ -50,6 +53,9 @@
 		2593E71A2AE8D93400CD514A /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCommon.swift; sourceTree = "<group>"; };
 		2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateCommon.swift; sourceTree = "<group>"; };
+		25B2B8602AEF65AD00830C09 /* InfoCardCommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardCommonView.swift; sourceTree = "<group>"; };
+		25B2B8642AEF9F9000830C09 /* ButtonIconCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIconCommon.swift; sourceTree = "<group>"; };
+		25B2B8672AEFB1C300830C09 /* AllGuardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGuardView.swift; sourceTree = "<group>"; };
 		2EA9EC63AFDB27287ED1D1AB /* Pods_GuardSystemApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuardSystemApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		597957CB2AE6E1AD00B8B0E2 /* GuardSystemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuardSystemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		597958332AE6E75A00B8B0E2 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -118,19 +124,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		2593E71C2AE914D600CD514A /* CommonView */ = {
+		25B2B8662AEFB1A900830C09 /* AllGurad */ = {
 			isa = PBXGroup;
 			children = (
-				2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */,
-				2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */,
+				25B2B8672AEFB1C300830C09 /* AllGuardView.swift */,
 			);
-			path = CommonView;
+			path = AllGurad;
 			sourceTree = "<group>";
 		};
 		597958292AE6E75A00B8B0E2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2593E71C2AE914D600CD514A /* CommonView */,
 				5979582A2AE6E75A00B8B0E2 /* Networking */,
 				5979582D2AE6E75A00B8B0E2 /* Models */,
 			);
@@ -211,6 +215,10 @@
 				597958642AE981F600B8B0E2 /* CommonAlertView.swift */,
 				5979586E2AECFDAC00B8B0E2 /* FontSizeCommon.swift */,
 				597958702AECFFFB00B8B0E2 /* ColorCommon.swift */,
+				25B2B8602AEF65AD00830C09 /* InfoCardCommonView.swift */,
+				2593E71D2AE914EF00CD514A /* TextFieldCommon.swift */,
+				2593E71F2AE918DF00CD514A /* ButtonStateCommon.swift */,
+				25B2B8642AEF9F9000830C09 /* ButtonIconCommon.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 		5979583E2AE6E75A00B8B0E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				25B2B8662AEFB1A900830C09 /* AllGurad */,
 				5979587D2AEE2A1E00B8B0E2 /* Home */,
 				597958692AEB7BAF00B8B0E2 /* Signup */,
 				2593E70E2AE8D6B000CD514A /* Login */,
@@ -468,14 +477,17 @@
 				597958792AEE260700B8B0E2 /* AppRouter.swift in Sources */,
 				597958552AE6E75A00B8B0E2 /* Publisher+Utils.swift in Sources */,
 				597958512AE6E75A00B8B0E2 /* NetworkClient.swift in Sources */,
+				25B2B8682AEFB1C400830C09 /* AllGuardView.swift in Sources */,
 				597958762AED24CB00B8B0E2 /* SignupRouter.swift in Sources */,
 				597958712AECFFFB00B8B0E2 /* ColorCommon.swift in Sources */,
 				597958542AE6E75A00B8B0E2 /* Container.swift in Sources */,
 				597958742AED23F800B8B0E2 /* SignupProvider.swift in Sources */,
 				5979586F2AECFDAC00B8B0E2 /* FontSizeCommon.swift in Sources */,
 				2593E71B2AE8D93400CD514A /* LoginRouter.swift in Sources */,
+				25B2B8652AEF9F9000830C09 /* ButtonIconCommon.swift in Sources */,
 				597958852AEE431600B8B0E2 /* NewsView.swift in Sources */,
 				59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */,
+				25B2B8612AEF65AD00830C09 /* InfoCardCommonView.swift in Sources */,
 				2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

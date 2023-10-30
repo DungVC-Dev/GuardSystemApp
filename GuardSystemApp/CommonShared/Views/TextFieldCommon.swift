@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommonTextFieldLogin: View {
-    @State var isHidenPass = true
+    @State var isHiddenPass = true
     var title: String
     var placeholder: String
     var text: Binding<String>
@@ -36,7 +36,7 @@ struct CommonTextFieldLogin: View {
 private extension CommonTextFieldLogin {
     var textFieldLogin: some View {
         HStack(spacing: 12) {
-            if isHidenPass {
+            if isHiddenPass {
                 Text(String(repeating: "*", count: text.wrappedValue.count))
                     .font(.customFontSize(font: .openSans, weight: .semibold, size: 16))
             } else {
@@ -47,9 +47,9 @@ private extension CommonTextFieldLogin {
             Spacer()
 
             Button {
-                isHidenPass.toggle()
+                isHiddenPass.toggle()
             } label: {
-                Image(systemName: isHidenPass ? "eye.slash" : "eye")
+                Image(systemName: isHiddenPass ? "eye.slash" : "eye")
                     .resizable()
                     .scaledToFit()
                     .foregroundColor(.mediumGray)
@@ -77,12 +77,12 @@ private extension CommonTextFieldLogin {
             .background(
                 Rectangle()
                     .foregroundColor(.clear)
-                    .background(Color(red: 0.85, green: 0.85, blue: 0.85).opacity(0.3))
+                    .background(Color.semiTransparentlightGray)
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .inset(by: 0.5)
-                            .stroke(Color(red: 0.52, green: 0.52, blue: 0.52).opacity(0.3), lineWidth: 1)
+                            .stroke(Color.semiTransparentMediumGray, lineWidth: 1)
                     )
             )
     }

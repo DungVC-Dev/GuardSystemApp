@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var selectedTab = 0
     @State var searchText = ""
+    @State var isActive = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -39,24 +40,29 @@ struct HomeView: View {
                 }
                 .tag(3)
         }
-        .accentColor(.mixBlueGreen)
+        .accentColor(.GreenBlue)
     }
 }
 
 // MARK: Home View
 private extension HomeView {
     func makeHomeView() -> some View {
-        VStack(spacing: 30) {
-            makeTopOfHomeView
-            searchUser
-            NewsView()
-            Spacer()
-            EmptyView()
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 30) {
+                    makeTopOfHomeView
+                    searchUser
+                    NewsView()
+                    suggestGuard
+                    Spacer()
+                    EmptyView()
+                }
+                .padding()
+                EmptyNavigationLink(destination: AllGuardView(rootIsActive: $isActive), isActive: $isActive)
+            }
         }
-        .padding()
     }
 
-    @ViewBuilder
     var makeTopOfHomeView: some View {
         HStack(spacing: 12) {
             Rectangle()
@@ -88,7 +94,6 @@ private extension HomeView {
         }
     }
 
-    @ViewBuilder
     var searchUser: some View {
         HStack(spacing: 12) {
             Button {
@@ -107,7 +112,7 @@ private extension HomeView {
             Spacer()
 
             Button {
-                // handler search user
+                ///
             } label: {
                 Image(systemName: "mic")
                     .resizable()
@@ -130,6 +135,30 @@ private extension HomeView {
         )
     }
 
+    @ViewBuilder
+    var suggestGuard: some View {
+        HStack {
+            Text("All Guard")
+                .font(.customFontSize(font: .openSans, weight: .semibold, size: 24))
+                .foregroundColor(.black)
+
+            Spacer()
+
+            Button {
+                isActive = true
+            } label: {
+                Text("See all")
+                    .font(.customFontSize(font: .openSans, weight: .light, size: 16))
+                    .foregroundColor(.mediumGray)
+            }
+        }
+        InfoCardCommonView(
+            urlImage: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+            guardName: "KhiemPX",
+            description: "Chu lordlordlordlordlordlordlordlord",
+            rate: "5.0"
+        )
+    }
 }
 
 private extension HomeView {

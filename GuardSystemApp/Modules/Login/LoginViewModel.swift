@@ -26,7 +26,7 @@ class LoginViewModel: ObservableObject {
                 case .finished:
                     break
                 }
-            }, receiveValue: { [weak self] response in
+            }, receiveValue: { response in
                 TokenManager.shared.setToken(response.token)
                 AppRouter.shared.navigate(to: .home)
             })

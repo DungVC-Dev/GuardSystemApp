@@ -17,13 +17,13 @@ struct NewsView: View {
                 HStack(spacing: 0) {
                     ForEach(0..<pageCount, id: \.self) { index in
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.mixBlueGreen)
-                            .frame(width: UIScreen.main.bounds.width - 32)
+                            .foregroundColor(.GreenBlue)
+                            .frame(width: UIScreen.main.bounds.width)
                     }
                 }
                 .contentShape(Rectangle())
                 .frame(height: 200)
-                .offset(x: CGFloat(currentPage) * (-UIScreen.main.bounds.width + 32))
+                .offset(x: CGFloat(currentPage) * (-UIScreen.main.bounds.width))
                 .animation(.easeInOut(duration: 0.3))
                 .gesture(
                     DragGesture().onEnded { value in
@@ -56,7 +56,7 @@ struct PageControl: View {
             ForEach(0..<numberOfPages, id: \.self) { index in
                 Circle()
                     .frame(width: 10, height: 10)
-                    .foregroundColor(index == currentPage ? Color.mixBlueGreen : Color.gray)
+                    .foregroundColor(index == currentPage ? Color.GreenBlue : Color.gray)
                     .onTapGesture {
                         withAnimation {
                             currentPage = index

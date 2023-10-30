@@ -7,4 +7,5 @@ target 'GuardSystemApp' do
 
   # Pods for GuardSystemApp
   pod 'Alamofire', '~> 5.0'
+  pod 'Kingfisher', '~> 7.0'
 end
