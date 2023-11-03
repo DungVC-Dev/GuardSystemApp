@@ -9,10 +9,13 @@ import SwiftUI
 import Kingfisher
 
 struct InfoCardCommonView: View {
+    @State var isClick = false
     let urlImage: String
     let guardName: String
     let description: String
     let rate: String
+
+    //    var action: () -> Void
 
     var body: some View {
         HStack(spacing: 24) {
@@ -26,11 +29,12 @@ struct InfoCardCommonView: View {
                         .font(.customFontSize(font: .openSans, weight: .semibold, size: 18))
                     Spacer()
                     ButtonIconCommon(
-                        systemImage:"heart",
+                        systemImage: isClick ? "heart.fill" : "heart",
                         heightIcon: 24,
                         widthIcon: 24
                     ) {
-                        // handle after
+                        self.isClick.toggle()
+                        //                        action
                     }
                 }
 
@@ -56,6 +60,7 @@ struct InfoCardCommonView: View {
                         .lineLimit(2)
                     Image(systemName: "star.fill")
                         .resizable()
+                        .cornerRadius(4)
                         .frame(width: 16, height: 16)
                         .foregroundColor(.yellow)
                 }
