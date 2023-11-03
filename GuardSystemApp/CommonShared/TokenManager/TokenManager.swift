@@ -9,7 +9,15 @@ import Foundation
 
 class TokenManager {
     static let shared = TokenManager()
-    private var authToken: String?
+
+    private var authToken: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "AuthToken")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "AuthToken")
+        }
+    }
 
     func setToken(_ token: String) {
         authToken = token

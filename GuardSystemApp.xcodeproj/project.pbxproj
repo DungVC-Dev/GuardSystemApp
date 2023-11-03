@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		246D9A72662E000FE2835990 /* Pods_GuardSystemApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA9EC63AFDB27287ED1D1AB /* Pods_GuardSystemApp.framework */; };
+		254BBBD32AF4E511009B67C5 /* GetAllGuardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BBBD22AF4E511009B67C5 /* GetAllGuardProvider.swift */; };
+		254BBBD52AF4E54E009B67C5 /* GetAllGuardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BBBD42AF4E54E009B67C5 /* GetAllGuardRouter.swift */; };
+		254BBBD82AF4E6E1009B67C5 /* GetAllGuardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BBBD72AF4E6E1009B67C5 /* GetAllGuardModel.swift */; };
+		254BBBDB2AF4E87D009B67C5 /* GetAllGuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BBBDA2AF4E87D009B67C5 /* GetAllGuardViewModel.swift */; };
 		2593E7102AE8D6C500CD514A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E70F2AE8D6C500CD514A /* LoginView.swift */; };
 		2593E7122AE8D6EA00CD514A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E7112AE8D6EA00CD514A /* LoginViewModel.swift */; };
 		2593E7162AE8D75B00CD514A /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2593E7152AE8D75B00CD514A /* LoginRequest.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		254BBBD22AF4E511009B67C5 /* GetAllGuardProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGuardProvider.swift; sourceTree = "<group>"; };
+		254BBBD42AF4E54E009B67C5 /* GetAllGuardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGuardRouter.swift; sourceTree = "<group>"; };
+		254BBBD72AF4E6E1009B67C5 /* GetAllGuardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGuardModel.swift; sourceTree = "<group>"; };
+		254BBBDA2AF4E87D009B67C5 /* GetAllGuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGuardViewModel.swift; sourceTree = "<group>"; };
 		2593E70D2AE8D5F500CD514A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2593E70F2AE8D6C500CD514A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2593E7112AE8D6EA00CD514A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +106,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254BBBD62AF4E6CB009B67C5 /* GetAllGuard */ = {
+			isa = PBXGroup;
+			children = (
+				254BBBD72AF4E6E1009B67C5 /* GetAllGuardModel.swift */,
+			);
+			path = GetAllGuard;
+			sourceTree = "<group>";
+		};
+		2558401E2AF4E4AB007B70A8 /* GetAllGuard */ = {
+			isa = PBXGroup;
+			children = (
+				254BBBD22AF4E511009B67C5 /* GetAllGuardProvider.swift */,
+				254BBBD42AF4E54E009B67C5 /* GetAllGuardRouter.swift */,
+			);
+			path = GetAllGuard;
+			sourceTree = "<group>";
+		};
 		2593E70E2AE8D6B000CD514A /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				25B2B8672AEFB1C300830C09 /* AllGuardView.swift */,
+				254BBBDA2AF4E87D009B67C5 /* GetAllGuardViewModel.swift */,
 			);
 			path = AllGurad;
 			sourceTree = "<group>";
@@ -144,6 +170,7 @@
 		5979582A2AE6E75A00B8B0E2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2558401E2AF4E4AB007B70A8 /* GetAllGuard */,
 				597958722AED23C700B8B0E2 /* Signup */,
 				2593E7172AE8D7D500CD514A /* Login */,
 			);
@@ -153,6 +180,7 @@
 		5979582D2AE6E75A00B8B0E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				254BBBD62AF4E6CB009B67C5 /* GetAllGuard */,
 				597958662AEAA01F00B8B0E2 /* Signup */,
 				2593E7132AE8D74C00CD514A /* Login */,
 			);
@@ -458,8 +486,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				597958522AE6E75A00B8B0E2 /* NetworkUtils.swift in Sources */,
+				254BBBDB2AF4E87D009B67C5 /* GetAllGuardViewModel.swift in Sources */,
 				2593E7162AE8D75B00CD514A /* LoginRequest.swift in Sources */,
+				254BBBD82AF4E6E1009B67C5 /* GetAllGuardModel.swift in Sources */,
 				2593E7192AE8D81800CD514A /* LoginProvider.swift in Sources */,
+				254BBBD52AF4E54E009B67C5 /* GetAllGuardRouter.swift in Sources */,
 				597958572AE6E75A00B8B0E2 /* View+Utils.swift in Sources */,
 				59D93E4D2AE6D83B0040F4F2 /* ContentView.swift in Sources */,
 				2593E7102AE8D6C500CD514A /* LoginView.swift in Sources */,
@@ -488,6 +519,7 @@
 				597958852AEE431600B8B0E2 /* NewsView.swift in Sources */,
 				59D93E4B2AE6D83B0040F4F2 /* GuardSystemAppApp.swift in Sources */,
 				25B2B8612AEF65AD00830C09 /* InfoCardCommonView.swift in Sources */,
+				254BBBD32AF4E511009B67C5 /* GetAllGuardProvider.swift in Sources */,
 				2593E71E2AE914EF00CD514A /* TextFieldCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

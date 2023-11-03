@@ -8,22 +8,18 @@
 import SwiftUI
 
 struct AllGuardView: View {
+    @StateObject var viewModel = GetAllGuardViewModel()
     @Binding var rootIsActive : Bool
 
     var body: some View {
         ScrollView {
             VStack {
-                Text("All Guard")
-                    .font(.customFontSize(font: .openSans, weight: .bold, size: 26))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.skyBlue)
-                InfoCardCommonView(
-                    urlImage: "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
-                    guardName: "KhiemPX",
-                    description: "Chu lordlordlordlordlordlordlordlord",
-                    rate: "5.0"
-                )
-                Spacer()
+                titleView
+                if let allGuradModel = viewModel.allGuradModel {
+                    makeGuardListView(allGuradModel: allGuradModel)
+                    Spacer(minLength: 0)
+                }
+                Spacer(minLength: 0)
             }
         }
         .padding(.horizontal, 16)
@@ -38,6 +34,38 @@ struct AllGuardView: View {
                     }
                 }
         )
+        .onAppear {
+            viewModel.getAllGurad()
+        }
+        .onViewAlert(with: $viewModel.alert)
+    }
+}
 
+extension AllGuardView {
+    var titleView: some View {
+        Text("All Guard")
+            .font(.customFontSize(font: .openSans, weight: .bold, size: 26))
+            .multilineTextAlignment(.center)
+            .foregroundColor(.skyBlue)
+    }
+
+    func makeGuardListView(allGuradModel: GetAllGuardModel) -> some View {
+        LazyVStack(spacing: 8) {
+            ForEach(allGuradModel.guardList, id: \.id) { item in
+
+                InfoCardCommonView(
+                    urlImage: viewModel.convertDataToString(data: item.img),
+                    guardName: String(item.firstname + item.lastname),
+                    description: "\(item.address ?? "") + \(item.age ?? 0)",
+                    rate: "5.0"
+                )
+                //                InfoCardCommonView(
+                //                    urlImage: item.img ?? "",
+                //                    guardName: String(item.firstname + item.lastname),
+                //                    description: String((item.address ?? "") + (item.age ?? "")),
+                //                    rate: "5.0"
+                //                )
+            }
+        }
     }
 }

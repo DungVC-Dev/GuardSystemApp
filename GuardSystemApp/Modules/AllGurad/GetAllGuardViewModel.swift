@@ -1,22 +1,22 @@
 //
-//  LoginViewModel.swift
+//  GetAllGuardViewModel.swift
 //  GuardSystemApp
 //
-//  Created by dungvc1 on 25/10/2023.
+//  Created by dungvc1 on 03/11/2023.
 //
 
 import Combine
 import Foundation
 
-class LoginViewModel: ObservableObject {
+class GetAllGuardViewModel: ObservableObject {
     @Published public var alert: AlertViewObject? = nil
-    var loginModel: LoginResponse?
-    var loginProvider: LoginProvider = LoginClient()
+    var allGuradModel: GetAllGuardModel?
+    let getAllGuradClient: GetAllGuardProvider = GetAllGuardClient()
+
     private var cancellables = Set<AnyCancellable>()
 
-    func login(username: String, password: String) {
-        let request = LoginRequest(username: username, passwd: password)
-        loginProvider.getToken(param: request)
+    func getAllGurad() {
+      getAllGuradClient.getAllGuard()
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(let error):
@@ -27,10 +27,12 @@ class LoginViewModel: ObservableObject {
                     break
                 }
             }, receiveValue: { [weak self] response in
-                TokenManager.shared.setToken(response.token)
-                AppRouter.shared.navigate(to: .home)
-                self?.loginModel = response
+                self?.allGuradModel?.guardList = response.guardList
             })
             .store(in: &cancellables)
+    }
+
+    func convertDataToString(data: Data) -> String? {
+        return String(data: data, encoding: .utf8)
     }
 }

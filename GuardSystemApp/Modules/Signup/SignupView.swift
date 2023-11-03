@@ -20,7 +20,9 @@ struct SignupView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            EmptyNavigationLink(destination: LoginView(), isActive: $isAction)
+            if isAction || viewModel.signupModel != nil {
+                EmptyNavigationLink(destination: LoginView(), isActive: $isAction)
+            }
             Text("Create New Account")
                 .font(.customFontSize(font: .openSans, weight: .bold, size: 26))
                 .multilineTextAlignment(.center)
